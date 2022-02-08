@@ -1,0 +1,65 @@
+<html>
+	<head>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<title>Logan's Website</title>
+<script>
+	function setPage(num) {
+		switch(num) {
+		    case 1:
+		    	console.log("Home");
+		    	document.getElementById("page_m_home").style.display = "block";
+		    	document.getElementById("page_m_about").style.display = "none";
+		    	
+		    	break;
+		    case 2:
+		    	console.log("About");
+		    	document.getElementById("page_m_about").style.display = "block";
+		    	document.getElementById("page_m_home").style.display = "none";
+		    	break;
+		}
+	}
+</script>
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Logan's Website</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a onclick="this.className = 'nav-link active'; document.querySelector('#navbarSupportedContent > ul > li:nth-child(2) > a').className = 'nav-link'; setPage(1);" class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a onclick="this.className = 'nav-link active'; document.querySelector('#navbarSupportedContent > ul > li:nth-child(1) > a').className = 'nav-link'; setPage(2);" class="nav-link" href="#about">About</a>
+        </li>
+        </ul>
+        </div>
+  </div>
+</nav>
+<!-- Pages -->
+<!-- Home -->
+<div id="page_m_home">
+<!-- Page start -->
+	<div class="card" style="width: 18rem;">
+  <div class="card-body">
+  <img src="https://loganb2008.github.io/Screenshot%202022-02-08%2012.27.14.png" class="card-img-top" alt="Image">
+    <h5 class="card-title">USA 3G Shutdown Timers</h5>
+    <p class="card-text">Timers that show when 3G on US carriers will shut down</p>
+    <a href="https://loganb2008.github.io/coutdown/3g.html" class="btn btn-primary">Go</a>
+  </div>
+</div>
+<!-- Page end -->
+</div>
+<!-- About -->
+<div style="display: none;" id="page_m_about">
+<!-- Page start -->
+	<p class="fs-1">About</p>
+	<p class="fs-5">I'll update this later</p>
+<!-- Page end -->
+</div>
+	</body>
+</html>
